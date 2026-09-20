@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velora | Fine Jewellery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center py-8 px-10 border-b border-stone-200">
+        <h1 class="text-3xl tracking-widest uppercase">Velora</h1>
+        <div class="flex gap-6 items-center">
+            <button onclick="toggleCart()" class="relative hover:text-amber-700 transition">
+                Cart (<span id="cart-count">0</span>)
+            </button>
+        </div>
+    </nav>
+
+    <!-- Reliable Hero Section -->
+    <header class="relative min-h-[600px] w-full flex items-center justify-center overflow-hidden bg-stone-300">
+        <img src="./src/hero-image.avif" 
+             class="absolute inset-0 w-full h-full object-cover brightness-50" 
+             alt="Luxury Jewellery Showcase">
+        
+        <div class="relative text-center text-white p-6 z-10">
+            <h2 class="text-6xl md:text-8xl mb-6 font-serif">Unrivaled Elegance</h2>
+            <p class="text-xl mb-8 font-light italic">Discover our exclusive 2026 Collection.</p>
+            <button onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})" 
+                    class="border border-white px-10 py-4 hover:bg-white hover:text-stone-900 transition uppercase tracking-widest text-sm">
+                Shop Now
+            </button>
+        </div>
+    </header>
+
+    <!-- Shop Section -->
+    <div id="shop" class="px-10 py-16">
+        <div class="flex gap-4 mb-10 justify-center">
+            <button onclick="filterProducts('all')" class="px-6 py-2 border rounded-full hover:bg-stone-900 hover:text-white transition">All</button>
+            <button onclick="filterProducts('Ring')" class="px-6 py-2 border rounded-full hover:bg-stone-900 hover:text-white transition">Rings</button>
+            <button onclick="filterProducts('Necklace')" class="px-6 py-2 border rounded-full hover:bg-stone-900 hover:text-white transition">Necklaces</button>
+        </div>
+        <div id="product-grid" class="grid md:grid-cols-3 gap-12"></div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="hidden fixed top-0 right-0 h-full w-80 bg-white border-l shadow-2xl p-6 transition-transform z-50">
+        <h2 class="text-2xl mb-6 font-serif">Your Bag</h2>
+        <div id="cart-items" class="space-y-4"></div>
+        <button onclick="toggleCart()" class="mt-10 w-full bg-stone-900 text-white py-3 hover:bg-amber-800 transition">Checkout</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
