@@ -28,7 +28,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: 'fatimadev23/velora-jewellery:v1'
+          tags: 'fatimadev23/velora-jewellery:v${{ github.run_number }}'
 
       - name: Github CI
         run: echo "Success!"
