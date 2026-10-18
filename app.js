@@ -1,7 +1,7 @@
 const products = [
     { id: 1, name: "Gold Solitaire Ring", type: "Ring", price: 1250, img: "https://plus.unsplash.com/premium_photo-1674498704099-bdd05f6fc274?auto=format&fit=crop&q=80&w=800" },
-    { id: 2, name: "Diamond Drop Earrings", type: "Earring", price: 2800, img: "https://plus.unsplash.com/premium_photo-1674255466849-b23fc5f5d3eb?auto=format&fit=crop&q=80&w=800" },
-    { id: 3, name: "Pearl Chain Necklace", type: "Necklace", price: 950, img: "https://plus.unsplash.com/premium_photo-1681276169450-4504a2442173?auto=format&fit=crop&q=80&w=800" }
+    { id: 2, name: "Diamond Drop Earrings", type: "Earring", price: 2800, img: "https://plus.unsplash.com/premium_photo-1681276169450-4504a2442173?auto=format&fit=crop&q=80&w=800" },
+    { id: 3, name: "Pearl Chain Necklace", type: "Necklace", price: 950, img: "https://plus.unsplash.com/premium_photo-1674255466849-b23fc5f5d3eb?auto=format&fit=crop&q=80&w=800" }
 ];
 
 let cart = [];
