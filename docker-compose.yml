@@ -1,0 +1,7 @@
+services:
+  web:
+    image: fatimadev23/velora-jewellery:latest
+    container_name: velora-container
+    ports:
+      - "80:80"
+    restart: always
